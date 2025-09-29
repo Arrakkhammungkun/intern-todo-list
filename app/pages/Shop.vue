@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { useProductStore } from '~~/stores/useProductStore'
-import { useCartStore } from '~~/stores/useCartStore'
+import { useProductStore } from '~/stores/useProductStore'
+import { useCartStore } from '~/stores/useCartStore'
 
 const productStore = useProductStore()
 const cartStore = useCartStore()
 
 onMounted(() => {
-  productStore.fetchProducts()
+  productStore.getProducts()
 })
 </script>
 

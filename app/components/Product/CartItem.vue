@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
-import { useCartStore } from '~~/stores/useCartStore'
+import { useCartStore } from '~/stores/useCartStore'
 
 const props = defineProps<{ item: any }>()
-
+const { item } = props
 const cartStore = useCartStore()
 
 function handleRemove() {
-  cartStore.removeFromCart(props.item.id)
+  cartStore.removeFromCart(item.id)
 }
 </script>
 
